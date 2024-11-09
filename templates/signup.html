@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET RESCUE CLUB</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+    <div class="header" id="home">
+        <ul>
+
+            <li><a href="/"><h2>Home</h2></a></li>
+            <li><a href="/about"><h2>About</h2></a></li>
+            <li><a href="/findpet" target="_blank"><h2>Find a pet</h2></a></li>
+            <li><a href="/discover"><h2>Discover</h2></a></li>
+            <li><a href="/contact"><h2>Contact</h2></a></li>
+            <li style="float: right;"><a href="/login"><h2>Login/Register</h2></a></li>
+
+        </ul>
+    </div>
+
+
+    <!-- login from -->
+
+    <center>
+
+        <div class="signup">
+            <h2>Create Account</h2>
+
+            <form action="/register" method="post">
+                
+                <table>
+
+                    <tr>
+                        <td> <label for="name">Name: </label></td>
+                        <td><input type="text" name="name" id="name" required placeholder="name"></td> 
+                    </tr>
+
+                
+
+                    <tr>
+                        <td> <label for="email">Email : </label></td>
+                        <td><input type="email" name="email" id="email" required placeholder="email"></td> 
+                    </tr>
+                    
+                    <tr>
+                        <td><label for="password">Create password:</label></td>
+                        <td><input type="password" name="password" id="password" required placeholder="password"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="confirm_password">Confirm password:</label></td>
+                        <td><input type="password" name="confirm_password" id="confirm_password" required placeholder="re-enter password"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="role">Register as</label></td>
+                        <td><input type="radio" name="role" id="role1" required value="user">User
+                            <input type="radio" name="role" id="role2" required value="rescue">Shelter Partner</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Sign Up" class="log"></td>
+                    </tr>
+                </table>
+            </form>
+            <h3>Have an account <span class="login-link"><a href="/login">Login now.</a></span></h3>
+        </div>
+    </center>
+    
+    <div class="footer">
+        
+        <img src="../static/footer.png" alt="footer" width="100%">
+
+        <div class="content">
+
+            <table class="footer-table">
+                
+                <tr>
+                    <th><u>QUICK LINKS</u></th>
+                    <th><u>ABOUT US</u></th>
+                    <th><u>RESOURCES</u></th>
+                    <th><u>Contact Us</u></th>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <a href="">Discover Adoption</a> <br>
+                        <a href="">Donate</a> <br>
+                        <a href="">Volunteer</a> <br>
+                    </td>
+
+                    <td>
+                        <a href="">About Us</a><br>
+                        <a href="">Terms & Conditions</a><br>
+                        <a href="">Privacy Policy</a><br> 
+                    </td>
+
+                    <td>
+                    <a href="">Breeds</a> <br>
+                    <a href="">Feeding</a> <br>
+                    <a href="">Health & Wellness</a> <br>
+                    </td>
+
+                    <td>
+                        <p>112 Street, Hyderabad, Telangana India</p>
+                        <p>+91 1234567890</p>
+                        <p>xyz@example.com</p>
+                    </td>
+
+                </tr>
+                        
+            </table>
+
+            <center>
+
+                <div class="span-icon">
+
+                    Connect with us online : 
+
+                    <span><a href=""><img src="../static/icons/twitter.png" alt="twitter"></a></span>
+                    
+                    <span><a href=""><img src="../static/icons/linkedin.png" alt="linkedin"></a></span>
+                    
+                    <span><a href=""><img src="../static/icons/instagram.png" alt="instagram"></a></span>
+                    
+                    <span><a href=""><img src="../static/icons/facebook.png" alt="favebook"></a></span>
+                    
+                    <span><a href=""><img src="../static/icons/youtube.png" alt="youtube"></a></span>
+                    
+                    <span><a href=""><img src="../static/icons/whatsapp.png" alt="whatsapp"> /petrescueclub</a></span>
+                    
+                    <br> <br>
+
+                    <img src="../static/icons/trade-mark.png" alt="trade mark"> 2024 <span class="name">The Pet Rescue Club</span>. All trademarks are owned by Pet Rescue Club, or used with permission.
+                        
+                </div>
+            </center>
+        </div>
+    </div>
+    <div class="position-absolute bottom-0 end-0">
+        <div class="m-4">
+            {%with messages = get_flashed_messages(category_filter=["error"]) %}
+            {% if messages %}
+                    <div class="alert alert-danger alert-dismissible fade show">          
+                        {{messages[0]}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+            {% endif %}
+            {% endwith %}
+            {%with messages = get_flashed_messages(category_filter=["success"]) %}
+            {% if messages %}
+                    <div class="alert alert-success alert-dismissible fade show">          
+                        {{messages[0]}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+            {% endif %}
+            {% endwith %}
+        </div>
+        </div>
+</body>
+</html>

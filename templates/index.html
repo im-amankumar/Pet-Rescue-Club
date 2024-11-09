@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET RESCUE CLUB</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body> 
+    <div class="banner">
+        <img src="../static/index-banner.png" alt="pet rescue club" width="100%">
+    </div>
+
+    <div class="header" id="home">
+        <ul>
+            <li><a href="/"><h2>Home</h2></a></li>
+            <li><a href="/about"><h2>About</h2></a></li>
+            <li><a href="/findpet" target="_blank"><h2>Find/Register pet</h2></a></li>
+            <li><a href="/discover"><h2>Discover</h2></a></li>
+            <li><a href="/contact"><h2>Contact</h2></a></li>
+            <li style="float: right;">{% if user %}<h2><a href="\log-out">Logout</a></h2>{% else %}<a href="/login"><h2>Login/Register</h2></a>{% endif %}</li>
+
+        </ul>
+    </div>
+
+    <!-- our core vision -->
+
+    <div class="vision">
+        <div class="v1">
+            <h1>OUR CORE VISION</h1>  
+            <br>
+            <p style="font-size: 24px;">
+            Our core vision is to connect people with their perfect pets, promote
+            responsible pet ownership, and eliminate animal homelessness. It provides a user-friendly
+            platform for adopting animals, educates about the benefits of adoption and proper care, and
+            advocates for animal welfare. The website aims to make the adoption process transparent and
+            enjoyable while fostering a supportive community. It celebrates successful adoption stories to
+            inspire others and create a world where every animal finds a loving home.
+            </p>
+        </div>
+        
+        <div class="v2">
+            <img class="" src="../static/coreVision.png" alt="Man holding a dog" height="450" width="400px">
+        </div>
+
+    </div>
+
+<!-- before you adopt -->
+
+    <div class="adopt">
+        
+        <div class="a1">
+            <img class="" src="../static/beforeAdopt.png" alt="cat picture" height="450px" width="450px">
+        </div>
+
+        <div class="a2">
+            <h1>BEFORE YOU ADOPT</h1>  
+            <br>
+            <p style="font-size: 24px;">
+                Caring for a companion animal goes far beyond providing food, water and shelter. It takes planning to bring the right pet into your home, and to make sure your lifestyle is the right one for your pet.
+                <br>
+                Ensure you have the time, resources, and love to provide a forever home. Remember, adopting a pet is a lifelong commitment that brings immeasurable joy and responsibility.
+            </p>
+        </div>
+        
+    </div>
+    
+    <!-- why choose pet -->
+
+    <div class="choose">
+            <center>
+                <h1>
+                    WHY YOU SHOULD CHOOSE ADOPTION
+                </h1>
+            </center>
+
+            <br>
+
+            <table class="table">
+
+                <tr>
+                    <th>1. PET IMPROVE YOUR MOOD</th>
+                    <th>2. PET MAKE YOU FEEL MORE SECURE</th>
+                    <th rowspan="6"><img src="../static/why.png" alt="people playing with dog"></th>
+                </tr>
+
+                <tr>
+                    <td>
+                        According to studies, spending time with your pet can trigger an increased level of oxytocin, also known as the “love hormone”
+                    </td>
+                    <td>
+                        Large dog breeds like German shepherds and Rottweilers make for great deterrents from outside threats, allowing their owners to feel safer.
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>3. PET IMPROVES YOUR SOCIAL LIFE
+                    </th>
+                    <th>4. PET IMPROVES PHYSICAL ACTIVITY
+                    </th>
+                </tr>
+
+                <tr>
+                    <td>Pet owners were significantly more likely to get to know people in their neighborhood than those who did not own a pet.</td>
+                    <td>Taking your dog for a walk also makes you more physically fit and increases the chance you're going to get your daily exercise</td>
+                </tr>
+
+                <tr>
+                    <th>5. PET MAKES YOU A BETTER PERSON
+                    </th>
+                    <th>6. PET MAKES YOU KIND
+                    </th>
+                </tr>
+
+                <tr>
+                    <td>
+                        According to a study by BarkBox, owning a dog can make you a better person (or at least make you think you are!). Of those surveyed for the study, 93% of pet owners said they make them noticeably more patient or affectionate
+                    </td>
+                    <td>
+                        Children growing up with a pet do so with more empathy towards animals and more empathy in general.
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <br>
+
+        <center>
+
+            <div class="process">
+                <h1>ADOPTION PROCESS</h1>
+            <br>
+            <h3>we have made the meeting process as comfortable as possible for owners and their future pets</h3>
+
+
+                <div class="search">
+                    <img src="../static/icons/window.png" alt="window search" width="125px">
+                    <br>
+                    <h2>Browse our available pets</h2>
+                    <br>
+                    <p>Go through out available pets and submit the Adoption request</p>
+                </div>
+
+                <div class="meet">
+                    <img src="../static/icons/calendar.png" alt="meet & greet" width="125px">
+                    <br>
+                    <h2>Meet & Greet</h2>
+                    <br>
+                    <p>Determine if the pet is a good match by meeting in person</p>
+                </div>
+
+                <div class="final">
+                    <img src="../static/icons/document.png" alt="finalize" width="125px">
+                    <br>
+                    <h2>Finalize the adoption</h2>
+                    <br>
+                    <p>Complete some required paper works and get a new Furry Friend</p>
+                </div>
+                
+            </div>
+
+                <h3>With just following these super simple steps you will be able to find the best selection for you.</h3>
+                
+                <br>
+            
+        </center>
+        
+        <center>
+            <div class="help">
+                <br><br>
+                <h1>
+                    HOW YOU CAN HELP US?
+                </h1>
+                <br><br>
+                <div class="donate">
+                    <h1>DONATE US</h1>
+                    <br>
+                    <h3>
+                        Your valuable donations can make a significant difference in the lives of sheltered pets. By contributing funds, you directly support the shelters and rescue organizations in their efforts to provide proper care, medical treatment, and essential resources for the pets in their care.
+                    </h3>
+                    <br>
+                    <a href="#"><h2>Donate Now</h2></a>
+                    <br>
+                    
+                </div>
+
+                <div class="volunter">
+                    <h1>VOLUNTEER</h1>
+                    <br>
+                    <h3>
+                        Your valuable donations can make a significant difference in the lives of sheltered pets. By contributing funds, you directly support the shelters and rescue organizations in their efforts to provide proper care, medical treatment, and essential resources for the pets in their care.
+                    </h3>
+                    <br>
+                    <a href="#"><h2>Become a Volunteer</h2></a>
+                    <br>
+                    
+                </div>
+                
+            </div>
+        </center>
+
+        <div class="footer">
+        
+
+            <img src="../static/footer.png" alt="footer" width="100%">
+            <div class="content">
+
+                <table class="footer-table">
+                    
+                    <tr>
+                        <th><u>QUICK LINKS</u></th>
+                        <th><u>ABOUT US</u></th>
+                        <th><u>RESOURCES</u></th>
+                        <th><u>Contact Us</u></th>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <a href="">Discover Adoption</a> <br>
+                            <a href="">Donate</a> <br>
+                            <a href="">Volunteer</a> <br>
+                        </td>
+
+                        <td>
+                            <a href="">About Us</a><br>
+                            <a href="">Terms & Conditions</a><br>
+                            <a href="">Privacy Policy</a><br> 
+                        </td>
+
+                        <td>
+                        <a href="">Breeds</a> <br>
+                        <a href="">Feeding</a> <br>
+                        <a href="">Health & Wellness</a> <br>
+                        </td>
+
+                        <td>
+                            <p>112 Street, Hyderabad, Telangana India</p>
+                            <p>+91 1234567890</p>
+                            <p>xyz@example.com</p>
+                        </td>
+
+                    </tr>
+                            
+                </table>
+
+                <center>
+
+                    <div class="span-icon">
+
+                        Connect with us online : 
+
+                        <span><a href=""><img src="../static/icons/twitter.png" alt="twitter"></a></span>
+                        
+                        <span><a href=""><img src="../static/icons/linkedin.png" alt="linkedin"></a></span>
+                        
+                        <span><a href=""><img src="../static/icons/instagram.png" alt="instagram"></a></span>
+                        
+                        <span><a href=""><img src="../static/icons/facebook.png" alt="favebook"></a></span>
+                        
+                        <span><a href=""><img src="../static/icons/youtube.png" alt="youtube"></a></span>
+                        
+                        <span><a href=""><img src="../static/icons/whatsapp.png" alt="whatsapp"> /petrescueclub</a></span>
+                        
+                        <br> <br>
+
+                        <img src="../static/icons/trade-mark.png" alt="trade mark"> 2024 <span class="name">The Pet Rescue Club</span>. All trademarks are owned by Pet Rescue Club, or used with permission.
+                            
+                    </div>
+                </center>
+            </div>
+        </div>
+
+    </body>
+</html>

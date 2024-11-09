@@ -1,0 +1,607 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: cursive;
+    
+}
+
+.header{
+    display: inline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #a9754e;
+    font-family: cursive;
+
+    /* sticky navigation bar */
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+
+li  a{
+    display: block;
+    color: #000;
+    float: left;
+    text-align: center;
+    padding: 15px 40px;
+    text-decoration: none;
+} 
+
+li a:hover{
+    background-color: #decec1;
+    border-radius: 10px;
+}
+
+/* vission */
+
+.vision{
+    display: inline-block;
+    background-color: #decec1;
+    padding: 15px;
+}
+
+.v1, .v2{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    
+}
+
+.v1{
+    padding: 50px;
+}
+
+.v2{
+    padding: 60px;
+    text-align: center;
+}
+
+/* before you adopt */
+
+.adopt{
+    display: inline-block;
+    padding: 15px;
+}
+
+.a1, .a2{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.a1{
+    padding: 50px;
+    text-align: center;
+
+}
+
+.a2{
+    padding: 60px;
+    
+}
+
+/* why you should choose adoption */
+
+.choose{
+    background-color: #decec1;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.table{
+    padding: 20px;
+}
+
+th, td{
+    padding: 20px;
+    text-align: left;
+}
+
+/* adoption process */
+
+.search, .meet, .final{
+    width: 33%;
+    float: left;
+    padding: 90px 0px; 
+}
+
+/* help us */
+
+.help{
+    background-color: #decec1;
+    display: inline-block;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.donate, .volunter{
+    width: 48%;
+    float: left;
+    box-sizing: border-box;
+    padding: 30px;
+    
+}
+
+.donate{
+    margin-right: 18px;
+    background-color: #a9754e;
+    border-radius: 15px;
+}
+
+.volunter{
+    margin-left: 18px;
+    background-color: #a9754e;
+    border-radius: 15px;
+}
+
+.donate a{
+    display: block;
+    color: #a9754e;
+    float: left;
+    text-align: center;
+    padding: 15px 40px;
+    text-decoration: none;
+    background-color: #decec1;
+    border-radius: 15px;
+}
+
+.volunter a{
+    display: block;
+    color: #a9754e;
+    float: left;
+    text-align: center;
+    padding: 15px 40px;
+    text-decoration: none;
+    background-color: #decec1;
+    border-radius: 15px;
+}
+
+.donate a:hover, .volunter a:hover{
+    background-color: antiquewhite;
+}
+
+/* footer */
+
+.footer{
+    position: relative;
+    text-align: left;
+    color: #000;
+}
+
+.content{
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    right: 5%;
+    background-color: #decec1;
+    color: #000;
+    
+}
+
+.content a{
+    text-decoration: none;
+    color: #000;
+}
+
+.content a:hover{
+    opacity: 0.5;
+}
+
+.content img{
+    width: 20px;
+    height: 20px;
+
+}
+
+.footer-table{
+    font-size: 24px;
+    width: 100%;
+}
+
+.span-icon{
+    word-spacing: 4px;
+    padding: 20px;
+    font-size: 22px;
+}
+
+
+
+/* about style */
+
+.a-one{
+    display: inline-block;
+    padding: 30px;
+    background-color: #decec1;
+}
+
+.a-one h2{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 28px;
+}
+
+.a-one1, .a-one2{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.a-one1 img{
+    width: 300px;
+    height: 350px;
+}
+
+.a-one2{
+    padding: 50px;
+    font-size: 35px;
+    text-align: left;
+}
+
+.a-two{
+    display: inline-block;
+    padding: 30px;
+}
+
+/* inspiration */
+
+.inspiration{
+    display: inline-block;
+    padding: 20px;
+    background-color: #decec1;
+}
+
+.inspiration h2{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 28px;
+}
+
+.insp1, .insp2{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.insp1 img{
+    width: 350px;
+    height: 400px;
+}
+
+.insp2{
+    font-size: 26px;
+    text-align: left;
+}
+
+
+/* bold name */
+
+.name{
+    font-weight: bold;
+}
+
+/* discover */
+
+.stat{
+    display: inline-block;
+    padding: 50px;
+    text-align: center;
+}
+
+
+.stat1, .stat2, .stat3, .stat4{
+    width: 25%;
+    float: left;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.stat1{
+    border-radius: 50px;
+    /* background-color: #decec1; */
+}
+
+.stat2{
+    border-radius: 50px;
+    background-color: #decec1;
+}
+
+.stat3{
+    border-radius: 50px;
+    /* background-color: #decec1; */
+}
+
+.stat4{
+    border-radius: 50px;
+    background-color: #decec1;
+    padding-bottom: 53px;
+}
+
+.stat-foot{
+    text-align: center;
+    font-size: 18px;
+}
+
+/* adoption */
+.adoption{
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.adoption h1{
+    text-align: center;
+}
+
+/* for d1 */
+.d1{
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.d1 .image, .d1 .con{
+    float: left;
+    box-sizing: border-box;
+}
+
+.d1 .image{
+    padding: 30px;
+}
+
+.d1 .con{
+    padding: 50px;
+    width: 50%;
+}
+
+/* for d2 */
+.d2{
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.d2 .image, .d2 .con{
+    float: right;
+    box-sizing: border-box;
+}
+
+.d2 .image{
+    padding: 30px;
+}
+
+.d2 .con{
+    padding: 50px;
+    width: 52%;
+}
+
+/* breed information */
+
+.breed{
+    display: inline-block;
+    padding: 30px 100px;
+    text-align: center;
+}
+
+.breed img{
+    width: 100%;
+    padding-top: 30px;
+}
+
+.know-dog, .know-cat{
+    width: 50%;
+    float: left;
+}
+
+.breed a{
+    text-decoration: none;
+    color: #000;
+    background-color:#a9754e;
+    padding: 25px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+
+.breed a:hover{
+    background-color: #decec1;
+}
+
+
+/* connect */
+.connect{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 25px;
+    background-color: #decec1;
+    width: 100%;
+}
+
+.c1, .c2{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.c1{
+    padding: 30px;
+}
+
+.c2{
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 25px;
+    padding-top: 115px;
+    padding-left: 100px;
+    height: 550px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.c1 img{
+    width: 22px;
+}
+
+.c2 .submit{
+    background-color: #decec1;
+    padding: 10px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.c2 .submit:hover{
+    background-color:blanchedalmond;
+}
+
+/* login */
+
+.login{
+    padding: 50px;
+    border: 2px solid black;
+    margin: 100px 300px;
+    font-size: 20px;
+}
+
+.login .log{
+    width: 100%;
+    padding: 10px;
+    background-color: #decec1;
+    border-radius: 20px;
+}
+
+.login .log:hover{
+    background-color: blanchedalmond;
+}
+
+.signup-link a{
+    text-decoration: none;
+}
+
+/* signup */
+
+.signup{
+    padding: 50px;
+    border: 2px solid black;
+    margin: 100px 300px;
+    font-size: 20px;
+}
+
+.signup .log{
+    width: 100%;
+    padding: 10px;
+    background-color: #decec1;
+    border-radius: 20px;
+}
+
+.login-link a{
+    text-decoration: none;
+}
+
+.signup .log:hover{
+    background-color: blanchedalmond;
+}
+
+
+/* admin styles */
+
+.pet-aproval {
+    position: relative;
+    padding: 20px;
+    border: 2px solid black;
+    /* width: 300px; */
+    margin: 20px;
+    text-align: center;
+}
+
+.pet-aproval::before {
+    content: "PET APROVAL";
+    font-size: 24px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff; 
+    padding: 0 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+.reports {
+    position: relative;
+    padding: 20px;
+    border: 2px solid black;
+    /* width: 300px; */
+    margin: 20px;
+    text-align: center;
+}
+
+.reports::before {
+    content: "REPORTS";
+    font-size: 24px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff; 
+    padding: 0 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.messages {
+    position: relative;
+    padding: 20px;
+    border: 2px solid black;
+    /* width: 300px; */
+    margin: 20px;
+    text-align: center;
+}
+
+.messages::before {
+    content: "MESSAGES";
+    font-size: 24px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff; 
+    padding: 0 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* shelter page */
+
+.register-pet {
+    position: relative;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid black;
+    /* width: 300px; */
+    margin: 20px;
+    text-align: center;
+}
+
+.register-pet::before {
+    content: "Register Pet";
+    font-size: 24px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff; 
+    padding: 0 8px;
+    color: #333;
+    font-weight: bold;
+}
