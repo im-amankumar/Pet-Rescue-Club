@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Contract</title>
+    <link rel="stylesheet" href="../static/pet-contract.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+</head>
+
+<body id="body">
+    <div class="container" id="content">
+        <h1>Pet Adoption Contract</h1>
+
+        <!-- Parties Information -->
+        <section class="parties-info">
+            <h2>Parties Involved</h2>
+            <p>
+                The Pet Adoption Contract (hereinafter referred to as "Contract") is made and entered on
+                <input type="date" id="date" value="{{date}}">
+                By and Between:
+            </p>
+            <label>Adoption Center Name:</label>
+            <input type="text" placeholder="Enter Adoption Center Name" value="{{rescue.stored_name}}">
+
+            <label>Adoption Center email:</label>
+            <input type="email" placeholder="Enter Adoption Center email" value="{{rescue.stored_email}}">
+
+            <label>Adopter's Name:</label>
+            <input type="text" placeholder="Enter Adopter's Name" value="{{user.stored_name}}">
+
+            <label>Adopter's email:</label>
+            <input type="email" placeholder="Enter Adopter's email" value="{{user.stored_email}}">
+        </section>
+
+        <!-- Terms and Conditions -->
+        <section class="terms">
+            <h2>Terms and Conditions</h2>
+            <p>
+                The contract shall remain in effect for the pet's lifetime or until the pet returns to the Adoption
+                Center.
+            </p>
+
+            <!-- Terms as collapsible sections -->
+            
+                <h4>1. Pet Description</h4>
+                <table>
+                    <tr>
+                        <th>Pet Name</th>
+                        <th>Category</th>
+                        <th>Breed</th>
+                        <th>Sex</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Pet Name" value="{{pet.stored_name}}"></td>
+                        <td><input type="text" placeholder="Type" value="{{pet.stored_category}}"></td>
+                        <td><input type="text" placeholder="Breed" value="{{pet.stored_breed}}"></td>
+                        <td><input type="text" placeholder="Sex" value="{{pet.stored_gender}}"></td>
+                        
+                    </tr>
+                </table>
+            
+
+            
+                <h4>
+                    2. Identification and License
+                </h4>
+                
+                <p>The Adopter agrees that the pet shall wear a collar with an identification tag at all times. The
+                    Adopter shall maintain a proper municipal license under the local law and comply with all statutes
+                    and ordinances that apply to the pet.</p>
+            
+
+            
+                <h4>3. Veterinary Care</h4>
+                <p>The Adopter shall provide the pet with the necessary vaccination as advised by the pet's
+                    veterinarian. When the pet becomes sick or injured, immediate medical care shall be provided, and
+                    the Adopter shall take full responsibility for the veterinary expenses.</p>
+            
+<br><br><br>
+            
+                <h4>4. In-house Treatment</h4>
+                <p>The Adopter agrees to provide the pet with humane treatment at all times and shall provide the pet
+                    with proper food, freshwater, shelter, and exercise, and shall allow the pet a reasonable amount of
+                    time to adjust to the surrounding.</p>
+            
+
+            
+                <h4>5. Return Policy</h4>
+                <p>If the Adopter wishes to return the pet, the Adopter shall provide prior written notice to the
+                    Adoption Center. After the approval from the Adoption Center, the Adopter shall make necessary
+                    arrangements for a return. Until the pet is returned to the Adoption Center, the Adopter is
+                    responsible for providing proper care.</p>
+            
+
+            
+                <h4>6.Neuter/Spay</h4>
+                <p>In the event the pet has not been sterilized prior to the contract, then the Adopter agrees to Spay/
+                    Neuter the pet within <input type="number" placeholder="Number of Months"> months of adoption.</p>
+            
+
+            
+                <h4>7. Release of Liability</h4>
+                <p>The Adopter agrees never to file a claim or suit against the [Adoption Center Name]. The Adopter
+                    releases [Adoption Center Name] and its founders, employees, agents, representatives, volunteers,
+                    and assigns from any liability arising from the pet's adoption.</p>
+            
+
+            
+                <h4>8. Indemnity</h4>
+                <p>The Adopter agrees to indemnify and hold the [Adoption Center Name] harmless for any injury, illness,
+                    amputation, scarring, death, damages, or other losses to the pet, arising out as a result of the
+                    Adopter's negligence or liability.</p>
+            
+
+            
+                <h4>9. Miscellaneous</h4>
+                <p><strong>Assignment:</strong> No party may assign any of its rights or obligations or assign any of
+                    its terms of this Contract without the prior written consent of the other party, except where
+                    otherwise stated.</p>
+                <p><strong>Modification:</strong> No modification of this Contract shall be made unless in writing,
+                    signed by both parties.</p>
+                <p><strong>Governing Law:</strong> This Contract shall be construed by and in accordance with the laws
+                    of <input type="text" placeholder="State"></p>
+                <p><strong>Legal and Binding Contract:</strong> This Contract is legal and binding between the Parties
+                    as stated above. This Contract may be entered into and is legal and binding in the <input
+                        type="text" placeholder="Region/State/Country"> The Parties each represent that they have the
+                    authority to enter into this Contract.</p>
+                <p><strong>Entire Agreement:</strong> This Contract constitutes the entire Contract of the parties. No
+                    representations, promises, terms, conditions, obligations, or warranties whatsoever referring to the
+                    subject matter hereof, other than those expressly set forth herein, shall be of binding legal force
+                    or effect.</p>
+            
+        </section>
+        <br><br><br><br>
+        <!-- Acceptance and Signature -->
+        <section class="acceptance">
+            <h2>Acceptance and Signature</h2>
+            <p>The parties hereby agree to the terms and conditions of the contract and provide their acceptance by
+                signing below:</p>
+
+            <div class="signature">
+                <div class="sig-item">
+                    <label>Adopter Name:</label>
+                    <input type="text" placeholder="Signature" value="{{user.stored_name}}">
+                </div>
+                <div class="sig-item">
+                    <label>Shelter Name:</label>
+                    <input type="text" placeholder="Signature" value="{{rescue.stored_name}}">
+                </div>
+            </div>
+        </section>
+        <p id="msg" style="display: none;">You may close the window</p>
+        <!-- Submit Button -->
+        <button id="downloadButton" >Submit Contract</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    
+        <script>
+            document.getElementById("downloadButton").addEventListener("click", function() {
+                document.getElementById("downloadButton").style.display = 'none';
+                const element = document.getElementById('content');
+                
+                // Create a PDF from the HTML content and include CSS
+                html2pdf()
+                    .from(element)
+                    .save('styled-content.pdf').then(function(){
+                        document.getElementById("msg").style.display="block";
+                    });
+            });
+        </script>
+    </div>
+</body>
+
+</html>

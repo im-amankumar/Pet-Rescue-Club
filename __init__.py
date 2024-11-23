@@ -35,8 +35,7 @@ def create_initial_data(db):
     from models import User
     admin = User(
         stored_name="Admin",
-        stored_username="admin",
-        stored_email="admin@bookmagnet.com",
+        stored_email="admin@prc.org",
         stored_password=generate_password_hash("admin"),
         role="admin",
     )

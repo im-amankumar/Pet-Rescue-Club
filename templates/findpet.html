@@ -5,17 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PET RESCUE CLUB</title>
     <link rel="stylesheet" href="../static/style.css">
+
 </head>
 <body>
 
+
+    <div class="header" id="home">
+        <ul>
+
+            <li><a href="/index"><h2>Home</h2></a></li>
+            <li><a href="/about"><h2>About</h2></a></li>
+            <li><a href="/findpet"><h2>Find a pet</h2></a></li>
+            <li><a href="/discover"><h2>Discover</h2></a></li>
+            <li><a href="/contact"><h2>Contact</h2></a></li>
+            <li style="float: right;"><a href="/login"><h2>Login/Register</h2></a></li>
+
+        </ul>
+    </div>
+
+
     <!-- pets finder for adoption -->
 
+    <div class="view-pet">
+        
+    <div class="filter-row">
+        <button>Dogs</button>
+        <button>Cats</button>
+        <button>Other</button>
+
+        <div class="filter-column">
+            <label for="breed-select">Breed</label>
+            <select id="breed-select">
+                <option value="any">Any</option>
+                <optgroup label="Dogs">
+                    <option value="beagle">Beagle</option>
+                    <option value="boxer">Boxer</option>
+                    <option value="cocker-spaniel">Cocker Spaniel</option>
+                    <option value="dachshund">Dachshund</option>
+                    <option value="german-shepherd">German Shepherd</option>
+                    <option value="labrador-retriever">Labrador Retriever</option>
+                    <option value="pug">Pug</option>
+                    <option value="shih-tzu">Shih Tzu</option>
+                </optgroup>
+                <optgroup label="Cats">
+                    <option value="abyssinian">Abyssinian</option>
+                    <option value="bengal">Bengal</option>
+                    <option value="himalayan">Himalayan</option>
+                    <option value="persian">Persian</option>
+                    <option value="russian-blue">Russian Blue</option>
+                    <option value="scottish-fold">Scottish Fold</option>
+                    <option value="siamese">Siamese</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="filter-column">
+            <label for="gender-select">Gender</label>
+            <select id="gender-select">
+                <option value="any">Any</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="filter-column">
+            <label for="age-select">Age</label>
+            <select id="age-select">
+                <option value="any">Any</option>
+                <option value="puppyhood">Puppyhood (Upto 6 months)</option>
+                <option value="adolescence">Adolescence (6-18 months)</option>
+                <option value="adulthood">Adulthood (1.5-3 years)</option>
+                <option value="senior">Senior (3 years or more)</option>
+            </select>
+        </div>
+        <button id="filter-button" style="margin-left: auto;">Filter</button>
+    </div>
+
+    </div>
 
 
-
-
-
-
+    <div class="pet-container">
+        {% for pet in pets %}
+        <div class="pet-card">
+            <img src="{{pet.photo}}" alt="Pet Picture">
+            <h3>{{pet.stored_name}}</h3>
+            <p>Category: {{pet.stored_category}}</p>
+            <p>Breed: {{pet.stored_breed}}</p>
+            <p>Sex: {{pet.stored_gender}}</p>
+            <p>Age: {{pet.stored_age}}</p>
+            <form action="/adopt" method="post">
+            <button type="button" class="details-btn" onclick="toggleDetails(event)">Details</button>
+            <input type="number" value="{{pet.id}}" name = "petid"hidden>
+            <button type="submit">Adopt</button></form>
+            <div class="pet-desc" style="display:none;">
+                <p>{{ pet.stored_desc }}</p>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
     <div class="footer">
 
         <img src="../static/footer.png" alt="footer" width="100%">
@@ -85,5 +171,16 @@
             </center>
         </div>
     </div>
+    <script>
+        function toggleDetails(event) {
+            var petCard = event.target.closest('.pet-card');
+            var petDesc = petCard.querySelector('.pet-desc');
+            if (petDesc.style.display === "none" || petDesc.style.display === "") {
+                petDesc.style.display = "block";
+            } else {
+                petDesc.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

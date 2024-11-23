@@ -8,52 +8,78 @@
 </head>
 
 <body>
-
+    <script> 
+        function confirmAction() { 
+    
+            const checkbox = document.getElementById('termsCheckbox'); 
+    
+            if (checkbox.checked) { 
+                 const agree = confirm("Do you agree to the terms and conditions?");
+                  if (!agree) { 
+                    checkbox.checked = false; 
+                    }
+            } 
+            else{ 
+                const agree = confirm("Do you agree to the terms and conditions?");
+                if (agree) { 
+                    checkbox.checked = true; 
+                }
+            }
+        }
+    </script>
     <div class="register-pet">
         <center>
 
-            <form action="" method="post">
+            <form action="\register-pet" method="post" enctype="multipart/form-data">
                 <table>
                     <tr>
-                        <td><label for="">Pet Name : </label></td>
-                        <td><input type="text" placeholder="pet name"></td>
+                        <td><label for="petName">Pet Name : </label></td>
+                        <td><input type="text" placeholder="pet name" name="petName" id="petName"></td>
                     </tr>
                     <tr>
-                        <td><label for="">Pet Category : </label></td>
-                        <td><select name="" id="">
-                            <option value="">Dog</option>
-                            <option value="">Cat</option>
-                            <option value="">Other</option>
+                        <td><label for="category">Pet Category : </label></td>
+                        <td><select name="category" id="category">
+                            <option value="Dog">Dog</option>
+                            <option value="Cat">Cat</option>
+                            <option value="Other">Other</option>
                         </select></td>
                     </tr>
                     <tr>
-                        <td><label for="">breed : </label></td>
-                        <td><input type="text" placeholder="breed-info"></td>
+                        <td><label for="breed">breed : </label></td>
+                        <td><input name="breed"id="breed" type="text" placeholder="breed-info"></td>
                     </tr>
                     <tr>
-                        <td><label for="">Age (in months) : </label></td>
-                        <td><input type="number" name="" id="" placeholder="months"></td>
+                        <td><label for="gender">gender : </label></td>
+                        <td><input name="gender"id="gender1"value="Male" type="radio">Male
+                            <input name="gender"id="gender2"value="Female" type="radio">Female
+                        </td>
                     </tr>
                     <tr>
-                        <td><label for="">Description: </label></td>
-                        <td><textarea name="" id="" placeholder="pet-description"></textarea></td>
+                        <td><label for="age">Age (in months) : </label></td>
+                        <td><input type="number" name="age" id="age" placeholder="months"></td>
                     </tr>
                     <tr>
-                        <td><label for="">Upload-photo: </label></td>
-                        <td><input type="file" name="" id=""></td>
+                        <td><label for="desc">Description: </label></td>
+                        <td><textarea name="desc" id="desc" placeholder="pet-description"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="photo">Upload-photo: </label></td>
+                        <td><input type="file" name="photo" id="photo"></td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="">Do you agree to the following terms and conditions?</label>
+                            <label for="tc">Do you agree to the following terms and conditions?</label>
                         </td>
                         <td>
-                            <input type="checkbox" name="" id="" required> I agree to the <a href="">terms of services</a>
+                            <!-- <input type="checkbox"  required> I agree to the <a href="">terms of services</a> -->
+                            <input type="checkbox" onclick="confirmAction()"  name="tc" id="tc" required> I agree to the <a href="../static/termsandcond.pdf" target="_blank">terms of services</a>
                         </td>
                     </tr>
-                    <!--  have to add css -->
-                    <center>
-                        <input type="submit" value="REGISTER PET">
-                    </center>
+                    <tr>
+                        <td colspan="2" class="register-button">
+                            <input type="submit" value="REGISTER PET">
+                        </td>
+                    </tr>
                 </table>
             </form>
             

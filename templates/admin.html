@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET RESCUE CLUB</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+
+    <div class="pet-aproval">
+        <div class="pet-container">
+            {% for pet in pets %}
+            <div class="pet-card">
+                <img src="{{pet.photo}}" alt="Pet Picture">
+                <h3>{{pet.stored_name}}</h3>
+                <p>Category: {{pet.stored_category}}</p>
+                <p>Breed: {{pet.stored_breed}}</p>
+                <p>Sex: {{pet.stored_gender}}</p>
+                <p>Age: {{pet.stored_age}}</p>
+                <form action="/admin-home" method="POST">
+                <button type="submit" name="flag" value="0">Reject</button>
+                <input type="number" value="{{pet.id}}" name = "petid"hidden>
+                <button type="submit" name="flag" value="1">Accept</button></form>
+                <div class="pet-desc" style="display:none;">
+                    <p>{{ pet.stored_desc }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="messages">
+        {% for msg in messages %}
+        <div>
+            Name: {{msg.stored_name}}
+            Email: {{ msg.stored_email}}
+            Message: {{ msg.stored_message}}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+
+
